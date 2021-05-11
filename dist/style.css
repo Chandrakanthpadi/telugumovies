@@ -1,0 +1,173 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #011627;
+}
+
+.grid {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.8rem;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding-bottom: 2rem;
+  place-content: center;
+}
+
+@media (min-width: 40em) {
+  .grid {
+    place-content: initial;
+    padding-left: 0;
+  }
+}
+
+.movie {
+  background-color: coral;
+  height: 180px;
+  width: 130px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+  overflow: hidden;
+}
+
+@media (min-width: 40em) {
+  .movie {
+    height: 200px;
+    width: 150px;
+  }
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.movie h5 {
+  display: none;
+}
+
+.tagline {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-family: "Yusei Magic", sans-serif;
+  padding: 0 1rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(#bcbdc3), color-stop(#7c7f8b), color-stop(#3e4757), to(#011627));
+  background-image: linear-gradient(to bottom, #ffffff, #bcbdc3, #7c7f8b, #3e4757, #011627);
+}
+
+.tagline :nth-child(1) {
+  max-width: 600px;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 40em) {
+  .tagline :nth-child(1) {
+    font-size: 3rem;
+  }
+}
+
+.tagline :nth-child(2) {
+  font-size: 1.7rem;
+}
+
+@media (min-width: 40em) {
+  .tagline {
+    height: 55vh;
+  }
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 40em) {
+  .search {
+    margin-bottom: 5rem;
+  }
+}
+
+.search input[type="text"] {
+  padding: 14px 25px;
+  width: 90%;
+  max-width: 500px;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  font-size: 1rem;
+  border-radius: 25px;
+  background-color: white;
+  border: none;
+}
+
+.search input[type="text"]:focus,
+.search input[type="text"] :active {
+  outline: none;
+}
+
+.error {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  display: none;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 2rem;
+  font-family: "Yusei Magic", sans-serif;
+}
+/*# sourceMappingURL=style.css.map */
