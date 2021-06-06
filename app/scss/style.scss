@@ -1,0 +1,137 @@
+// Variables
+@import "variables";
+@import "mixins";
+// Other scss files
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #011627;
+}
+
+.grid {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: left;
+  padding-bottom: 2rem;
+  place-content: center;
+  @include breakpoint-up(medium) {
+    place-content: initial;
+    padding-left: 0;
+  }
+}
+.movie {
+  background-color: coral;
+  height: 180px;
+  width: 130px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  overflow: hidden;
+  @include breakpoint-up(medium) {
+    height: 200px;
+    width: 150px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  h5 {
+    display: none;
+  }
+  &:hover {
+    // card hover state;
+  }
+}
+
+.tagline {
+  // height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Yusei Magic", sans-serif;
+  padding: 3rem 1rem;
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   #ffffff,
+  //   #bcbdc3,
+  //   #7c7f8b,
+  //   #3e4757,
+  //   #011627
+  // );
+  :nth-child(1) {
+    max-width: 600px;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color: red;
+    padding: 0.2rem 2rem;
+    border-radius: 5px;
+    @include breakpoint-up(medium) {
+      font-size: 3rem;
+    }
+  }
+  :nth-child(2) {
+    font-size: 1.7rem;
+    text-align: center;
+    border-radius: 5px;
+  }
+  @include breakpoint-up(medium) {
+    // height: 55vh;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  @include breakpoint-up(medium) {
+    margin-bottom: 3rem;
+  }
+  input[type="text"] {
+    padding: 14px 25px;
+    width: 90%;
+    max-width: 500px;
+    transition: 200ms;
+    font-size: 1rem;
+    border-radius: 25px;
+    background-color: white;
+    border: none;
+    &:focus,
+    :active {
+      outline: none;
+    }
+  }
+}
+
+.error {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  display: none;
+  // position: relative;
+  // transform: translateX(50%);
+  width: 90%;
+  margin: auto;
+  padding-bottom: 2rem;
+  font-family: "Yusei Magic", sans-serif;
+}
