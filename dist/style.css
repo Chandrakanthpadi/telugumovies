@@ -80,7 +80,6 @@ body {
 }
 
 .tagline {
-  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,9 +95,7 @@ body {
           justify-content: center;
   color: white;
   font-family: "Yusei Magic", sans-serif;
-  padding: 0 1rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(#bcbdc3), color-stop(#7c7f8b), color-stop(#3e4757), to(#011627));
-  background-image: linear-gradient(to bottom, #ffffff, #bcbdc3, #7c7f8b, #3e4757, #011627);
+  padding: 3rem 1rem;
 }
 
 .tagline :nth-child(1) {
@@ -106,6 +103,9 @@ body {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 1rem;
+  background-color: red;
+  padding: 0.2rem 2rem;
+  border-radius: 5px;
 }
 
 @media (min-width: 40em) {
@@ -116,12 +116,8 @@ body {
 
 .tagline :nth-child(2) {
   font-size: 1.7rem;
-}
-
-@media (min-width: 40em) {
-  .tagline {
-    height: 55vh;
-  }
+  text-align: center;
+  border-radius: 5px;
 }
 
 .search {
@@ -139,7 +135,7 @@ body {
 
 @media (min-width: 40em) {
   .search {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 }
 
